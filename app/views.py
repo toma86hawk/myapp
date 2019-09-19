@@ -4,5 +4,10 @@ from django.http import HttpResponse
 
 
 def index(request):
+    # pass the 'context' data to templates 
+    context = {
+        'message': 'Welcome my BBS',
+        'players': ['勇者', '戦士', '魔法使い']
+    } 
     # open templates/app/index.html on server
-    return render(request, 'app/index.html')
+    return render(request, 'app/index.html', context)

@@ -11,5 +11,11 @@
     <body>
         <h1>Bio infoMix</h1>
         <p>hello world</p>
+        <!-- views.pyからcontextのデータをもらう -->
+        <p>{{ message }}</p>
+        <!-- pythonの文は"{%"の中で書く　ループはendforで閉じる -->
+        {% for player in players %}
+            <p>{{ player }}はモンスターと戦った</p>
+        {% endfor %}
     </body>
 </html>
